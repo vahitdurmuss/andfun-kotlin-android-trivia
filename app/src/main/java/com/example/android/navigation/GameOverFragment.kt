@@ -36,6 +36,6 @@ class GameOverFragment : Fragment() {
             it.findNavController().navigate(R.id.action_gameOverFragment2_to_gameFragment)
         }
 
-        return binding.root
+        return binding.gameOverConstraintLayout
     }
 }
