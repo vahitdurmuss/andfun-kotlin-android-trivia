@@ -24,13 +24,13 @@ class TitleFragment : Fragment() {
 
         binding.playButton.setOnClickListener {
             //view?.findNavController()?.navigate(R.id.action_titleFragment_to_gameFragment);
-            Navigation.findNavController(it).navigate(R.id.action_titleFragment_to_gameFragment)
+            Navigation.findNavController(it).navigate(TitleFragmentDirections.actionTitleFragmentToGameFragment())
             //Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_gameFragment);
 
         }
         setHasOptionsMenu(true)
 
-        return  binding.root;
+        return  binding.titleConstraint;
     }
 
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
@@ -41,5 +41,4 @@ class TitleFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         return NavigationUI.onNavDestinationSelected(item!!,view!!.findNavController()) ||  super.onOptionsItemSelected(item)
     }
-
 }
